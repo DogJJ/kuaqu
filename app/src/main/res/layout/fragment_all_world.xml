@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/all_world_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/all_world_scan" />
+
+        <ImageView
+            android:id="@+id/all_world_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/all_world_message" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/all_world_message"
+            android:layout_toRightOf="@id/all_world_scan"
+            android:background="@mipmap/all_world_scan_background"
+            android:drawableLeft="@mipmap/all_world_glass"
+            android:drawablePadding="8dp"
+            android:hint="双十一"
+            android:paddingLeft="8dp"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="none"
+        android:paddingTop="8dp">
+        <LinearLayout
+            android:id="@+id/all_world_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/all_world_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/all_world_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

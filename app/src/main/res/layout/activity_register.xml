@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.wangqu.kuaqu.ui.TitleUi xmlns:titleUI="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titleUI:titleText="注册"></com.wangqu.kuaqu.ui.TitleUi>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/login_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="跨区世界商店"
+        android:textColor="@color/word"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/login_btn_line"
+        android:drawableLeft="@mipmap/login_head"
+        android:drawablePadding="28dp"
+        android:hint="手机号码"
+        android:paddingLeft="28dp"
+        android:textColor="@color/word"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.6dp">
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/login_btn_line"
+            android:drawableLeft="@mipmap/login_password"
+            android:drawablePadding="28dp"
+            android:hint="密码"
+            android:paddingLeft="28dp"
+            android:textColor="@color/word"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/login_pass_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/login_password"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:src="@mipmap/register_visibility" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.6dp">
+
+        <com.wangqu.kuaqu.ui.CheckView
+            android:id="@+id/register_checkview"
+            android:layout_width="65dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="43dp"
+            app:bg_color="@color/white"
+            app:line_num="10"
+            app:point_num="100"
+            app:text_length="4"
+            app:text_size="20dp" />
+
+        <EditText
+            android:id="@+id/check_code"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/register_checkview"
+            android:background="@drawable/login_btn_line"
+            android:drawableLeft="@mipmap/check_code"
+            android:drawablePadding="28dp"
+            android:hint="验证码(点击切换)"
+            android:inputType="number"
+            android:paddingLeft="28dp"
+            android:textColor="@color/word"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_login"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="23.4dp"
+        android:background="@drawable/login_btn_solid"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:gravity="bottom"
+        android:text="注册即代表同意跨区服务条款"
+        android:textColor="@color/word"
+        android:textSize="12dp"
+
+        />
+
+</LinearLayout>

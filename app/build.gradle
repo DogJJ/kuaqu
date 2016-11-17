@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.wangqu.kuaqu"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "pfVrG3oXkl8D3rw3RrJis6",
+                GETUI_APP_KEY : "QcaTOOFXPX7f3B2QSCsdj6",
+                GETUI_APP_SECRET : "R1EEWVSjDp8byb5rpXzpp7",
+                PACKAGE_NAME : applicationId
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "mips", "mips64", "x86", "x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'io.reactivex:rxjava:x.y.z'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.xhb:xbanner:1.2.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.getui:sdk:+'
+    compile 'com.google.android:flexbox:0.1.3'
+    compile 'com.android.support:recyclerview-v7:24.0.+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/httpmime-4.1.2.jar')
+    compile files('libs/IndoorscapeAlbumPlugin.jar')
+    compile 'com.android.support:support-v4:+'
+    compile 'com.roger.catloadinglibrary:catloadinglibrary:1.0.1'
+
+}

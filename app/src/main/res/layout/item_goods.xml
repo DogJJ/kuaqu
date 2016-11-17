@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="125dp"
+    android:layout_height="175dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/goods_gradient"
+        />
+    <ImageView
+        android:id="@+id/goods_image"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/goods_image"
+        android:layout_marginTop="12dp"/>
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="11111111111111111111111111"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:layout_below="@id/goods_image"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/goods_name"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/goods_special_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/text_special"
+            android:text="80"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint"
+            android:text="120"
+            android:textSize="12dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
